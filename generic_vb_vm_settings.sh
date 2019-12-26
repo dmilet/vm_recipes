@@ -43,3 +43,5 @@ sed -i '/swap/d' /etc/fstab
 swapoff -a
 
 sed -i 's/SELINUX=enforcing/SELINUX=permissive/' /etc/selinux/config
+setenforce 0
+
