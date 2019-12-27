@@ -62,7 +62,7 @@ yum install kubeadm docker -y
 systemctl restart docker && systemctl enable docker
 systemctl  restart kubelet && systemctl enable kubelet
 
-kubeadm init --v=5 --control-plane-endpoint=master1  --pod-network-cidr=10.244.0.0/16
+kubeadm init --v=5 --control-plane-endpoint=master1 --api-advertise-addresses=192.168.52.3 --pod-network-cidr=10.244.0.0/16
 
 # Copy configuration to make kubectl command work
 mkdir -p $HOME/.kube
